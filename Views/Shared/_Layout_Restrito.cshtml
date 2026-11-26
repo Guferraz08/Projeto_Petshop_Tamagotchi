@@ -1,0 +1,112 @@
+﻿
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewData["Title"] - Tamagotchi Pet Shop</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            background-color: #14532d;
+            padding: 18px 0;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+            .navbar-brand span {
+                color: #facc15;
+            }
+
+        .usuario {
+            color: white;
+        }
+
+        .conteudo {
+            padding: 35px 0;
+            min-height: 85vh;
+        }
+
+        footer {
+            background-color: #14532d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO ADMINISTRATIVO -->
+
+    <nav class="navbar navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                Tamagotchi<span>Pet Shop</span>
+                <small class="text-white-50">| Administração</small>
+            </a>
+
+            <div class="usuario">
+
+                <i class="bi bi-person-circle"></i>
+                Funcionário
+
+                <a asp-controller="AreaPublica"
+                   asp-action="VeiculosNacionais"
+                   class="btn btn-outline-light btn-sm ms-3">
+
+                    <i class="bi bi-box-arrow-left"></i>
+                    Voltar à loja
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- CONTEÚDO DA PÁGINA -->
+
+    <main class="conteudo">
+
+        <div class="container">
+
+            @RenderBody()
+
+        </div>
+
+    </main>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+        Tamagotchi Pet Shop - Área Administrativa
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
